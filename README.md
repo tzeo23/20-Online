@@ -1,2 +1,1058 @@
-# 20-Online
-Ένας αναλυτικός, πρακτικός οδηγός με 20 ελκυστικές ιδέες για online εισόδημα. Κάθε κάρτα σου δείχνει τι είναι η μέθοδος, πώς ξεκινάς, τι χρειάζεσαι και ποιο είναι το ρεαλιστικό εύρος κέρδους όταν δουλέψεις σοβαρά.
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>20 Τρόποι να Βγάλεις Λεφτά Online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg: #050814;
+      --bg-light: #0f172a;
+      --bg-card: #111827;
+      --text: #e5e7eb;
+      --text-muted: #9ca3af;
+      --accent: #f97316;
+      --accent-soft: #fed7aa;
+      --border: rgba(148,163,184,0.35);
+      --radius: 14px;
+      --shadow: 0 18px 40px rgba(15,23,42,0.85);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #020617 0, #020617 40%, #050814 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(15,23,42,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(148,163,184,0.25);
+      padding: 14px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 0.06em;
+      color: var(--accent-soft);
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+    }
+
+    nav ul li a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.15s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent-soft);
+    }
+
+    /* LAYOUT */
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 18px 40px;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero-title {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .hero-pill-row {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-pill {
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: rgba(15,23,42,0.9);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px rgba(248,113,22,0.9);
+    }
+
+    .hero-cta {
+      margin-top: 22px;
+    }
+
+    .hero-button {
+      padding: 12px 24px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #f97316, #fb923c);
+      color: #111827;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .hero-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 42px rgba(0,0,0,0.85);
+    }
+
+    .hero-button span.icon {
+      font-size: 1.2rem;
+    }
+
+    .hero-note {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      margin-top: 32px;
+      margin-bottom: 18px;
+      font-size: 1.8rem;
+      text-align: center;
+      color: var(--accent-soft);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-title {
+        font-size: 2.1rem;
+      }
+    }
+
+    /* CARD */
+    .card {
+      background: radial-gradient(circle at top left, rgba(248,113,22,0.12), transparent 55%),
+                  var(--bg-card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 16px 14px 16px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .card-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 10px;
+      background: rgba(248,113,22,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .card-tag {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.5);
+      color: var(--text-muted);
+      background: rgba(15,23,42,0.9);
+      white-space: nowrap;
+    }
+
+    .card-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .card-list {
+      list-style: none;
+      font-size: 0.85rem;
+      color: var(--text);
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+
+    .card-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .card-list li span.bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      margin-top: 6px;
+      background: rgba(248,113,22,0.9);
+    }
+
+    .card-footer {
+      border-top: 1px dashed rgba(148,163,184,0.4);
+      padding-top: 6px;
+      margin-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .income-label {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+      color: rgba(248,113,22,0.9);
+    }
+
+    .income-range {
+      font-weight: 600;
+      color: var(--accent-soft);
+    }
+
+    .difficulty {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .difficulty span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(148,163,184,0.5);
+    }
+
+    .difficulty span.dot.active {
+      background: var(--accent);
+      box-shadow: 0 0 8px rgba(248,113,22,0.9);
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 30px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(148,163,184,0.35);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer a {
+      color: var(--accent-soft);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Online<span>Income</span>Map</div>
+    <ul>
+      <li><a href="#top">Αρχική</a></li>
+      <li><a href="#ideas">20 Ιδέες</a></li>
+      <li><a href="#focus">Συμβουλές</a></li>
+    </ul>
+  </nav>
+
+  <div class="page" id="top">
+    <section class="hero">
+      <h1 class="hero-title">20 Τρόποι να Βγάλεις Λεφτά Online</h1>
+      <p class="hero-subtitle">
+        Ένας αναλυτικός, πρακτικός οδηγός με 20 ελκυστικές ιδέες για online εισόδημα. 
+        Κάθε κάρτα σου δείχνει τι είναι η μέθοδος, πώς ξεκινάς, τι χρειάζεσαι και 
+        ποιο είναι το ρεαλιστικό εύρος κέρδους όταν δουλέψεις σοβαρά.
+      </p>
+      <div class="hero-pill-row">
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          Ιδανικό για αρχάριους & προχωρημένους
+        </div>
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          Χωρίς μεγάλο αρχικό κεφάλαιο
+        </div>
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          Εστίαση σε πραγματικές, δοκιμασμένες μεθόδους
+        </div>
+      </div>
+      <div class="hero-cta">
+        <button class="hero-button">
+          <span class="icon">⚡</span>
+          Διάλεξε 1 ιδέα και ξεκίνα σήμερα
+        </button>
+        <p class="hero-note">
+          Μην προσπαθήσεις όλες τις ιδέες μαζί. Διάλεξε μία, δούλεψέ την 3–6 μήνες και βελτίωσέ την σταθερά.
+        </p>
+      </div>
+    </section>
+
+    <h2 class="section-title" id="ideas">Οι 20 Ιδέες</h2>
+    <p class="section-subtitle">
+      Κάθε ιδέα έχει σύντομη περιγραφή, βασικά βήματα εκκίνησης και ενδεικτικό εύρος εισοδήματος 
+      όταν αποκτήσεις εμπειρία και συνέπεια.
+    </p>
+
+    <section class="grid">
+      <!-- 1 Freelancing -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">💻</div>
+            Freelancing σε Παγκόσμιες Πλατφόρμες
+          </div>
+          <span class="card-tag">Γρήγορη εκκίνηση</span>
+        </div>
+        <p class="card-body">
+          Πουλάς τις δεξιότητές σου (γραφιστική, κείμενα, προγραμματισμός, marketing, μεταφράσεις) 
+          σε πελάτες από όλο τον κόσμο μέσω πλατφορμών όπως Upwork, Fiverr και Freelancer.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Φτιάξε προφίλ με καθαρή περιγραφή, φωτογραφία και υπηρεσίες.</li>
+          <li><span class="bullet"></span>Δημιούργησε μικρό portfolio με 3–6 δείγματα δουλειάς.</li>
+          <li><span class="bullet"></span>Ξεκίνα με μικρά projects για να χτίσεις reviews και εμπιστοσύνη.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">300€ – 2.500€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 Content Creation -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">🎥</div>
+            Δημιουργία Περιεχομένου (YouTube / TikTok)
+          </div>
+          <span class="card-tag">Μακροπρόθεσμο asset</span>
+        </div>
+        <p class="card-body">
+          Χτίζεις κοινό γύρω από ένα θέμα που αγαπάς και στη συνέχεια κερδίζεις από διαφημίσεις, 
+          χορηγίες, affiliate links και δικά σου προϊόντα ή courses.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Διάλεξε niche (θέμα) που μπορείς να υποστηρίξεις για χρόνια.</li>
+          <li><span class="bullet"></span>Ανέβαζε σταθερά περιεχόμενο (π.χ. 2–3 videos την εβδομάδα).</li>
+          <li><span class="bullet"></span>Μάθε βασικό SEO, τίτλους, thumbnails και storytelling.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">0€ – 10.000€+ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 Affiliate Marketing -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">🔗</div>
+            Affiliate Marketing
+          </div>
+          <span class="card-tag">Χωρίς δικό σου προϊόν</span>
+        </div>
+        <p class="card-body">
+          Προωθείς προϊόντα άλλων εταιρειών με ειδικά links και παίρνεις προμήθεια για κάθε πώληση. 
+          Ιδανικό σε συνδυασμό με blog, YouTube ή social media.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Γράψου σε προγράμματα όπως Amazon, Impact, ShareASale.</li>
+          <li><span class="bullet"></span>Δημιούργησε περιεχόμενο που λύνει συγκεκριμένο πρόβλημα.</li>
+          <li><span class="bullet"></span>Πρότεινε μόνο προϊόντα που θα χρησιμοποιούσες κι εσύ.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">100€ – 5.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4 E-commerce / Dropshipping -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">🛒</div>
+            E‑commerce & Dropshipping
+          </div>
+          <span class="card-tag">Πιο επιχειρηματικό</span>
+        </div>
+        <p class="card-body">
+          Δημιουργείς e‑shop και πουλάς προϊόντα χωρίς να κρατάς stock, χρησιμοποιώντας προμηθευτές 
+          που στέλνουν απευθείας στον πελάτη (dropshipping).
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Βρες προϊόν με ζήτηση και ξεκάθαρο target group.</li>
+          <li><span class="bullet"></span>Χρησιμοποίησε Shopify ή WooCommerce για το κατάστημά σου.</li>
+          <li><span class="bullet"></span>Δοκίμασε διαφημίσεις (Meta Ads, Google Ads) με μικρό budget.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">500€ – 20.000€+ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5 Print-on-Demand -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">👕</div>
+            Print‑on‑Demand (Merch)
+          </div>
+          <span class="card-tag">Χωρίς stock</span>
+        </div>
+        <p class="card-body">
+          Σχεδιάζεις μπλουζάκια, κούπες, αφίσες και άλλα προϊόντα, τα οποία τυπώνονται και 
+          αποστέλλονται μόνο όταν κάποιος αγοράζει.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Χρησιμοποίησε πλατφόρμες όπως Printful, Redbubble, Teespring.</li>
+          <li><span class="bullet"></span>Δημιούργησε μοναδικά designs για συγκεκριμένα κοινά (niches).</li>
+          <li><span class="bullet"></span>Προώθησε τα προϊόντα σου μέσω social media ή ads.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">100€ – 3.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 Online Courses -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">📚</div>
+            Δημιουργία Online Courses
+          </div>
+          <span class="card-tag">Παθητικό εισόδημα</span>
+        </div>
+        <p class="card-body">
+          Μετατρέπεις τη γνώση σου σε δομημένα μαθήματα και τα πουλάς σε πλατφόρμες ή 
+          μέσω δικού σου site, δημιουργώντας επαναλαμβανόμενο εισόδημα.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Ορίσε ξεκάθαρο αποτέλεσμα για τον μαθητή.</li>
+          <li><span class="bullet"></span>Χώρισε το course σε modules και βήματα.</li>
+          <li><span class="bullet"></span>Χρησιμοποίησε Udemy, Teachable ή δική σου πλατφόρμα.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">300€ – 8.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7 Coaching / Mentoring -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">🧭</div>
+            Coaching & Mentoring
+          </div>
+          <span class="card-tag">1‑to‑1 υπηρεσία</span>
+        </div>
+        <p class="card-body">
+          Προσφέρεις προσωπική καθοδήγηση σε άτομα ή ομάδες σε θέματα όπως καριέρα, 
+          fitness, productivity, business, σχέσεις κ.ά.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Διάλεξε συγκεκριμένο πρόβλημα που βοηθάς να λυθεί.</li>
+          <li><span class="bullet"></span>Ορίσε πακέτα (π.χ. 4 συνεδρίες / μήνα).</li>
+          <li><span class="bullet"></span>Χρησιμοποίησε Zoom, Calendly και online πληρωμές.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">400€ – 6.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8 Blogging with SEO -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">✍️</div>
+            Blogging με SEO
+          </div>
+          <span class="card-tag">Μακροπρόθεσμο traffic</span>
+        </div>
+        <p class="card-body">
+          Γράφεις άρθρα γύρω από ένα θέμα, φέρνεις επισκεψιμότητα από Google και 
+          κερδίζεις από διαφημίσεις, affiliate links και δικά σου προϊόντα.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Διάλεξε niche με αρκετή ζήτηση και χαμηλό ανταγωνισμό.</li>
+          <li><span class="bullet"></span>Μάθε keyword research και βασικό SEO on‑page.</li>
+          <li><span class="bullet"></span>Δημοσίευε σταθερά άρθρα (π.χ. 1–2 την εβδομάδα).</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">100€ – 4.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9 Social Media Management -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">📱</div>
+            Social Media Management
+          </div>
+          <span class="card-tag">Για επιχειρήσεις</span>
+        </div>
+        <p class="card-body">
+          Διαχειρίζεσαι λογαριασμούς social media για επιχειρήσεις, δημιουργώντας 
+          περιεχόμενο, απαντώντας σε μηνύματα και οργανώνοντας καμπάνιες.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Φτιάξε πακέτα (π.χ. X posts / μήνα + stories).</li>
+          <li><span class="bullet"></span>Δείξε παραδείγματα δουλειάς σε ένα portfolio.</li>
+          <li><span class="bullet"></span>Χρησιμοποίησε εργαλεία όπως Canva, Meta Business Suite.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">300€ – 3.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 10 Virtual Assistant -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">🗂️</div>
+            Virtual Assistant
+          </div>
+          <span class="card-tag">Οργάνωση & υποστήριξη</span>
+        </div>
+        <p class="card-body">
+          Βοηθάς επιχειρηματίες και επαγγελματίες με email, ραντεβού, αρχεία, 
+          έρευνα και γενική οργάνωση, εξ αποστάσεως.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Προσδιόρισε ξεκάθαρα τι υπηρεσίες προσφέρεις.</li>
+          <li><span class="bullet"></span>Χρησιμοποίησε πλατφόρμες όπως Upwork ή ειδικά VA sites.</li>
+          <li><span class="bullet"></span>Δείξε ότι είσαι αξιόπιστος, οργανωμένος και συνεπής.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">400€ – 2.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 11 Digital Products -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">💾</div>
+            Πώληση Digital Products
+          </div>
+          <span class="card-tag">100% online</span>
+        </div>
+        <p class="card-body">
+          Δημιουργείς ebooks, templates, presets, checklists, planners και τα πουλάς 
+          ξανά και ξανά χωρίς επιπλέον κόστος παραγωγής.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Διάλεξε πρόβλημα που λύνει το προϊόν σου.</li>
+          <li><span class="bullet"></span>Φτιάξε απλή landing page με ξεκάθαρο μήνυμα.</li>
+          <li><span class="bullet"></span>Πούλησε μέσω Gumroad, Etsy ή δικού σου site.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">100€ – 5.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 12 Web Design / Development -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">🌐</div>
+            Web Design & Development
+          </div>
+          <span class="card-tag">Για μικρές επιχειρήσεις</span>
+        </div>
+        <p class="card-body">
+          Φτιάχνεις ιστοσελίδες και landing pages για επαγγελματίες και μικρές επιχειρήσεις 
+          που χρειάζονται online παρουσία.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Μάθε βασικό HTML/CSS ή χρησιμοποίησε builders (WordPress, Webflow).</li>
+          <li><span class="bullet"></span>Δημιούργησε 2–3 demo sites ως portfolio.</li>
+          <li><span class="bullet"></span>Πρόσφερε πακέτα: site + συντήρηση + hosting.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">500€ – 6.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 13 Copywriting -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">📝</div>
+            Copywriting
+          </div>
+          <span class="card-tag">Κείμενα που πουλάνε</span>
+        </div>
+        <p class="card-body">
+          Γράφεις κείμενα για landing pages, διαφημίσεις, emails και sales pages 
+          που βοηθούν τις επιχειρήσεις να αυξήσουν τις πωλήσεις τους.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Μάθε βασικές αρχές ψυχολογίας πώλησης.</li>
+          <li><span class="bullet"></span>Δημιούργησε δείγματα κειμένων για διαφορετικούς κλάδους.</li>
+          <li><span class="bullet"></span>Πρόσφερε πακέτα: κείμενα + βελτιστοποίηση conversion.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">400€ – 5.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 14 Voice-over -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">🎙️</div>
+            Voice‑over & Narration
+          </div>
+          <span class="card-tag">Αν έχεις ωραία φωνή</span>
+        </div>
+        <p class="card-body">
+          Ηχογραφείς φωνητικά για videos, διαφημίσεις, audiobooks, podcasts και 
+          εκπαιδευτικό υλικό, από το σπίτι σου.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Επένδυσε σε ένα καλό μικρόφωνο και ήσυχο χώρο.</li>
+          <li><span class="bullet"></span>Φτιάξε demo με διαφορετικά στυλ φωνής.</li>
+          <li><span class="bullet"></span>Χρησιμοποίησε πλατφόρμες όπως Voices, Fiverr, Upwork.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">200€ – 3.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 15 Photo & Video Editing -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">🎬</div>
+            Photo & Video Editing
+          </div>
+          <span class="card-tag">Μεγάλη ζήτηση</span>
+        </div>
+        <p class="card-body">
+          Επεξεργάζεσαι φωτογραφίες και videos για creators, επιχειρήσεις και 
+          influencers που χρειάζονται επαγγελματικό αποτέλεσμα.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Μάθε εργαλεία όπως Photoshop, Premiere, DaVinci Resolve.</li>
+          <li><span class="bullet"></span>Δημιούργησε πριν/μετά παραδείγματα.</li>
+          <li><span class="bullet"></span>Πρόσφερε πακέτα για σταθερή συνεργασία.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">300€ – 4.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 16 Remote Customer Support -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">☎️</div>
+            Remote Customer Support
+          </div>
+          <span class="card-tag">Σταθερή δουλειά</span>
+        </div>
+        <p class="card-body">
+          Παρέχεις υποστήριξη πελατών μέσω email, chat ή τηλεφώνου για εταιρείες 
+          που λειτουργούν εξ αποστάσεως.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Αναζήτησε θέσεις σε remote job boards.</li>
+          <li><span class="bullet"></span>Δείξε υπομονή, ευγένεια και καλή επικοινωνία.</li>
+          <li><span class="bullet"></span>Μάθε τα εργαλεία που χρησιμοποιεί η εταιρεία (CRM, ticketing).</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">800€ – 2.500€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 17 Data Entry / Micro-tasks -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">⌨️</div>
+            Data Entry & Micro‑tasks
+          </div>
+          <span class="card-tag">Για αρχάριους</span>
+        </div>
+        <p class="card-body">
+          Εκτελείς απλές εργασίες όπως καταχώρηση δεδομένων, tagging, μικρές έρευνες 
+          και micro‑tasks σε ειδικές πλατφόρμες.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Χρησιμοποίησε Amazon MTurk, Clickworker, Appen κ.ά.</li>
+          <li><span class="bullet"></span>Δούλεψε σταθερά για να αυξήσεις τον όγκο εργασιών.</li>
+          <li><span class="bullet"></span>Ιδανικό ως πρώτο βήμα για να μπεις στον κόσμο του online εισοδήματος.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">50€ – 600€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 18 AI Automation Services -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">🤖</div>
+            AI Automation Services
+          </div>
+          <span class="card-tag">Σύγχρονη ευκαιρία</span>
+        </div>
+        <p class="card-body">
+          Στήνεις αυτοματισμούς με εργαλεία AI και no‑code για επιχειρήσεις 
+          (chatbots, email flows, αυτοματοποιημένες διαδικασίες).
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Μάθε βασικά εργαλεία AI και αυτοματισμού.</li>
+          <li><span class="bullet"></span>Βρες επιχειρήσεις που χάνουν χρόνο σε επαναλαμβανόμενες εργασίες.</li>
+          <li><span class="bullet"></span>Πρότεινε συγκεκριμένες λύσεις με ξεκάθαρο όφελος.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">500€ – 10.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 19 Stock Photos / Videos -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">📸</div>
+            Πώληση Stock Photos & Videos
+          </div>
+          <span class="card-tag">Δημιουργικό</span>
+        </div>
+        <p class="card-body">
+          Τραβάς φωτογραφίες ή videos και τα πουλάς σε stock πλατφόρμες που 
+          χρησιμοποιούνται από designers, εταιρείες και creators.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Χρησιμοποίησε Shutterstock, Adobe Stock, iStock κ.ά.</li>
+          <li><span class="bullet"></span>Εστίασε σε θέματα με μεγάλη ζήτηση (business, lifestyle, tech).</li>
+          <li><span class="bullet"></span>Χτίσε μεγάλη βιβλιοθήκη για παθητικό εισόδημα.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">50€ – 2.000€ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 20 App / Software Creation -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-icon">📱</div>
+            Δημιουργία Apps & Μικρού Software
+          </div>
+          <span class="card-tag">Συνδρομητικό μοντέλο</span>
+        </div>
+        <p class="card-body">
+          Φτιάχνεις μικρές εφαρμογές ή εργαλεία (web ή mobile) που λύνουν 
+          συγκεκριμένα προβλήματα και τα πουλάς με συνδρομή ή one‑time αγορά.
+        </p>
+        <ul class="card-list">
+          <li><span class="bullet"></span>Ξεκίνα με απλά εργαλεία που λύνουν ένα μικρό αλλά συγκεκριμένο πρόβλημα.</li>
+          <li><span class="bullet"></span>Χρησιμοποίησε no‑code ή low‑code πλατφόρμες αν δεν είσαι developer.</li>
+          <li><span class="bullet"></span>Δημιούργησε demo, μάζεψε feedback και βελτίωσε συνεχώς.</li>
+        </ul>
+        <div class="card-footer">
+          <div>
+            <div class="income-label">Εισόδημα</div>
+            <div class="income-range">500€ – 15.000€+ / μήνα</div>
+          </div>
+          <div class="difficulty">
+            Δυσκολία
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="focus" style="margin-top:28px;">
+      <p class="section-subtitle">
+        Μικρή συμβουλή: διάλεξε 1–2 ιδέες που ταιριάζουν στις δεξιότητές σου και στον χρόνο σου. 
+        Το μυστικό δεν είναι να δοκιμάσεις τα πάντα, αλλά να επιμείνεις σε κάτι που μπορείς 
+        να εξελίξεις σε βάθος.
+      </p>
+    </section>
+
+    <footer>
+      <p>Το online εισόδημα είναι μαραθώνιος, όχι σπριντ. Συνέπεια, μάθηση και βελτίωση φέρνουν τα αποτελέσματα.</p>
+      <p>Μπορείς να προσθέσεις δικά σου links, resources ή success stories για να κάνεις το site ακόμα πιο προσωπικό.</p>
+    </footer>
+  </div>
+</body>
+</html>
